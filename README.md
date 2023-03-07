@@ -16,10 +16,9 @@
 - [Contact](#contact)
 <!-- * [License](#license) -->
 
-## General Information
+## Description
 
--
--
+## -itle ir jei nori uzdet description(arba as ji veliau uzdesiu) ir technologies skilti
 
 <!-- You don't have to answer all the questions - just the ones relevant to your project. -->
 
