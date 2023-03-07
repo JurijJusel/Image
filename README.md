@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-- [General Info](#general-information)
+- [description](#description)
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Screenshots](#screenshots)
