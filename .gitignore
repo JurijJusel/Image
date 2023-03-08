@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Ignore everything in data directory
+data/
+
 # Ignore everything in dataset directory
 dataset/
 
