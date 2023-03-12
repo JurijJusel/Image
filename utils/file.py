@@ -25,5 +25,3 @@ def create_df(path_dir):
     df = pd.DataFrame(data, columns=['name','image_url'])
     df.to_csv('data/train.csv', index=False)
     return df
-
-print(create_df(train_dataset_path))
