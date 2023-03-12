@@ -23,4 +23,3 @@ def create_df():
     df.to_csv('data/train.csv', index=False)
     return df
 
-print(create_df())
