@@ -1,15 +1,18 @@
 import os
-from pathlib import Path
+import sys
+sys.path.insert(0, '/Users/namai/Documents/GitHub/Image')
 import pandas as pd
+from constants import train_dataset_path
 
 
-def create_df():
+
+def create_df(path_dir):
     image_url = []
     folder_name=[]
-    for file_path, folders, files in os.walk('/Users/namai/Documents/GitHub/Image/dataset/train/'):
+    for file_path, folders, files in os.walk(path_dir):
         for file in files:
             full_path = os.path.join(file_path, file)
-            if ".jpg" or '.jpeg' or '.png' in full_path:
+            if ".jpg" or '.jpeg' or '.png' or '.JPG' in full_path:
                 image_url.append(full_path)
                 direct = file_path.split('/')[8:]
                 folder_name.append('/'.join(direct))
@@ -23,3 +26,4 @@ def create_df():
     df.to_csv('data/train.csv', index=False)
     return df
 
+print(create_df(train_dataset_path))
