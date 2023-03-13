@@ -29,8 +29,11 @@ def create_df(path_dir):
     return df
 
 
-def resize_image_to_122(image_path):
+def resize_image(image_path, img_size):  # img_size e.g. 122x122 tuple (122,122) or (256,256).
     img = cv2.imread(image_path)
-    img_resized = cv2.resize(img, (122, 122))
+    img_resized = cv2.resize(img, img_size)
     img_array = np.array(img_resized)
     return img_array
+    # return img_array.shape
+
+
