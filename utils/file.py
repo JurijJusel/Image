@@ -3,7 +3,9 @@ import sys
 sys.path.insert(0, '/Users/namai/Documents/GitHub/Image')
 import pandas as pd
 from constants import train_dataset_path
-
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
 
 
 def create_df(path_dir):
@@ -25,3 +27,10 @@ def create_df(path_dir):
     df = pd.DataFrame(data, columns=['name','image_url'])
     df.to_csv('data/train.csv', index=False)
     return df
+
+
+def resize_image_to_122(image_path):
+    img = cv2.imread(image_path)
+    img_resized = cv2.resize(img, (122, 122))
+    img_array = np.array(img_resized)
+    return img_array
