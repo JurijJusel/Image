@@ -30,7 +30,7 @@ def create_dataset_df(path_dir):
         'name': folder_name,
         'image_url': image_url,
     }
-
+    
     dataset_df = pd.DataFrame(data, columns=['name','image_url'])
     dataset_df.to_csv('data/train.csv', index=False)
     return dataset_df
@@ -71,6 +71,5 @@ def create_df_grey(csv_file, img_size):
     df_grey.to_csv('data/grey_df.csv', index=False)
     return df_grey        
   
-print(create_df_grey(apple_banana_csv_file, (122, 122)))
 
 
