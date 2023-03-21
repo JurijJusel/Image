@@ -71,5 +71,5 @@ def create_df_grey(csv_file, img_size):
     df_grey.to_csv('data/grey_df.csv', index=False)
     return df_grey        
   
-
+create_df_grey(apple_banana_csv_file, (122,122))
 
